@@ -12,7 +12,8 @@ function App(props) {
       <button onClick={props.getData}>Get Data</button>
       {props.loading && <p>loading</p>}
       {props.error && <p>error happen:{props.error}</p>}
-      {props.posts && <ul>{props.posts.map(item=><li>{item.title}</li>)}</ul>}
+      {props.posts && <ul>{props.posts.map(item=><li>{item.title}</li>)}</ul>} 
+   
      <Display1/>
      <Display2/>
     <Pluser/>
@@ -22,7 +23,7 @@ function App(props) {
     </div>
   );
 }
-const mapStateToProps=(state)=>{
+function mapStateToProps(state){
   return {
       posts:state.postState.data,
       loading:state.postState.loading,
