@@ -6,7 +6,8 @@ import Multi2 from "./components/Multi2"
 import Pluser from "./components/Pluser"
 import PlusInput from "./components/PlusInput";
 import {getData} from "./redux/reducer/postReducer"
-function App(props) {
+const  App=(props) =>{
+  console.log("props=",props)
   return (
     <div className="App">
       <button onClick={props.getData}>Get Data</button>
